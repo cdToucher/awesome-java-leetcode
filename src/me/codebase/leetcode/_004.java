@@ -13,7 +13,6 @@ public class _004 {
         int[] B = {2, 4, 5, 8, 9, 10};
         int[] C = {1, 2, 3, 4, 4, 5, 6, 8, 9, 10};
         // 4.5
-        System.out.println(Arrays.toString(args));
 
 //        System.out.println(findMedianSortedArrays(A, B));
     }
