@@ -28,12 +28,12 @@ public class _554 {
         input.add(new Integer[]{2, 4});
         input.add(new Integer[]{3, 1, 2});
         input.add(new Integer[]{1, 3, 1, 1});
-        solution(input);
+        System.out.println(solution(input));
     }
 
     private static int solution(List<Integer[]> input) {
-        int result = 0;
-        List<Integer[]> points = new ArrayList<>(input.size());
+        int result = -1;
+        List<List<Integer>> points = new ArrayList<>(input.size());
         for (Integer[] breaks : input) {
             List<Integer> list = new ArrayList<>();
             int point = 0;
@@ -41,9 +41,19 @@ public class _554 {
                 point += integer;
                 list.add(point);
             }
-            points.add(list.toArray(new Integer[list.size()]));
+            points.add(list);
         }
-
+        List<Integer> last = points.get(points.size() - 1);
+        for (int i = 0; i < last.size() - 1; i++) {
+            int temp = 0;
+            for (List<Integer> breaks : points) {
+                if (!breaks.contains(last.get(i)))
+                    temp++;
+            }
+            if (result == -1)
+                result = temp;
+            result = temp > result ? result : temp;
+        }
         return result;
     }
 }

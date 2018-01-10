@@ -1,9 +1,9 @@
 package me.codebase.leetcode;
 
 /**
- * Created by chendong on 2017/12/13.
+ * Created by chendong on 2018/1/10.
  */
-public class Test {
+public class _543 {
 
     public static void main(String[] args) {
 
