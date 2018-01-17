@@ -5,9 +5,8 @@ import java.util.Arrays;
 /**
  * Created by chendong on 2018/1/11.
  */
-public class QuickSort {
+public class QuickSort implements Sort{
 
-    private static final int[] arr = {0, 2, 4, 6, 8, 5, 3, 7, 9, 1, 400};
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(new QuickSort().sort(arr)));
